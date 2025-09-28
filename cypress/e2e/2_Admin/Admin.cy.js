@@ -49,13 +49,13 @@ describe('Admin Page', () => {
         cy.url().should('include', 'admin/viewSystemUsers')
         cy.contains('System Users').should('be.visible')
         cy.get('.orangehrm-header-container > .oxd-button')
-        
+
         //Add User
         cy.get('.orangehrm-header-container > .oxd-button').click()
         cy.get(':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').click()
         cy.get('.oxd-select-dropdown').within(() => {
             cy.contains('Admin').click();
-          });          
+        });
         // cy.contains('Admin').click();
         cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').click()
         cy.contains('Enabled').click();
@@ -84,7 +84,7 @@ describe('Admin Page', () => {
         cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').click()
         cy.get('.oxd-select-dropdown').within(() => {
             cy.contains('Admin').click();
-          }); 
+        });
         cy.get(':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').click()
         cy.contains('Enabled').click();
         cy.get('.oxd-form-actions > .oxd-button--secondary').click()
