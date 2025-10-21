@@ -37,7 +37,7 @@ describe('Admin Page', () => {
         cy.contains('Enabled').click();
         cy.get('.oxd-autocomplete-text-input > input').type('piyawat', { timeout: 1000 })
         cy.contains('piyawat').click()
-        cy.get(':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-input').type('Superman123')
+        cy.get(':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-input').type('Superman777')
         cy.get('.user-password-cell > .oxd-input-group > :nth-child(2) > .oxd-input').type('User123')
         cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input').type('User123')
         cy.contains('button', 'Save').click();
@@ -80,7 +80,7 @@ describe('Admin Page', () => {
         cy.contains('System Users').should('be.visible')
 
         // ค้นหา Username
-        cy.get(':nth-child(2) > .oxd-input').type('Superman123')
+        cy.get(':nth-child(2) > .oxd-input').type('Superman777')
         cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text').click()
         cy.get('.oxd-select-dropdown').within(() => {
             cy.contains('Admin').click();
